@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  background-size: auto 100vh;
+  font-family: Arial;
+  height: 100vh;
+}
+
+header {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Se a tela tiver ao minimo 400 pixels, vai ser carregado estes estilos*/
+
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/*Breakpoint - Pontos de quebra da tela que precisam de ajuste*/
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.menu {
+  background-color: black;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.site-title {
+  font-size: 3em;
+  font-family: 'Roboto Slab', serif;
+  color: whitesmoke;
+  text-align: center;
+  line-height: 2;
+}
+
+.site-subtitle {
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.5;
+  color: whitesmoke;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 180px;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.portifolio {
+  padding: 2em;
+}
+
+.portifolio .grid {
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: 560px){
+  .portifolio .grid {
+    grid-template-columns: repeat(2,240px);
+    justify-content: center;
+  }
+}
+
+@media (min-width: 820px){
+  .portifolio .grid {
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
+    height: calc(100vh - 4em - 48px - 1.5em);
+    background-color: gray;
+  }
+}
+
+.portifolio figure{
+  text-align: center;
+  
+}
+
+.portifolio h2 {
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 1.5em;
+}
+
+
+#apresentacao{
+  height: 200px;
+}
