@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
+    <iframe src="sound/starwarsintro" allow="autoplay" id="audio" style="display: none"></iframe>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renato Matos</title>
@@ -9,8 +11,16 @@
         href="https://fonts.googleapis.com/css2?family=Amiri&family=Press+Start+2P&family=Raleway&family=Roboto+Slab:wght@800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="CSS/starwarsintro.css">
-    
+
     <link rel="stylesheet" href="CSS/style.css">
+    <audio src="sound/starwarstheme.mp3" id="starwarstheme"></audio>
+    <script type="text/javascript">
+        window.onload = function () {
+            var context = new AudioContext();
+            document.getElementById("starwarstheme").click();
+        }
+    </script>
+
 </head>
 
 <body>
@@ -26,7 +36,28 @@
 
 
     <div class="star-wars-intro">
+        <input type="checkbox" name="un-mute" id="un-mute" width="50px" height="50px">
+        <label for="un-mute" class="unmute">
+            <img src="./img/icon-mute.png" alt="Mute_Icon.svg" width="50px" height="50px" title="Mute icon">
+        </label>
+        <label for="un-mute" class="mute">
+            <img src="./img/icon-sound.png" alt="Speaker_Icon.svg" width="50px" height="50px"
+                title="Unmute/speaker icon">
+        </label>
+        <script>
+            setTimeout(function () {
+                document.getElementById("starwarstheme").play();
+            }, 2500)
 
+
+            var un_mute = document.getElementById('un-mute');
+            un_mute.onclick = function () {
+                if (document.getElementById("starwarstheme").muted == true) {
+                    document.getElementById("starwarstheme").muted = false;
+                }
+                else { document.getElementById("starwarstheme").muted = true; }
+            };
+        </script>
         <!-- Blue Intro Text -->
         <p class="intro-text">
             Não muito tempo atrás numa galáxia não tão distante...
@@ -34,11 +65,12 @@
 
         <!-- Logo Image or Text goes in here -->
         <h1 class="main-logo">
-            EU NÃO AGUENTO MAIS A QUARENTENA!!!
+            NÃO AGUENTO MAIS A QUARENTENA!!!
         </h1>
 
         <!-- All Scrolling Content Goes in here -->
         <div class="main-content">
+
 
             <div class="title-content">
                 <p class="content-header">EPISÓDIO I<br />A Nova Pandemia</p>
@@ -46,15 +78,20 @@
                 <br>
 
                 <p class="content-body">
-                    A desordem reina no Brasil, um momento delicado onde aqueles que buscam salvar vidas são desrespeitados
-                    e combater a pandemia se tornou uma questão de opnião política, econômica e de achismo. O mundo encara uma corrida a todo
-                    vapor atrás da vacina para combater um inimigo em comum.<br/><br/>
-                    
-                    Com o plano de isolamento social iniciado, as pessoas dentro de casa, a chegada do tédio se torna inevitável, 
-                    em meio a isso um jovem resolve desenvolver seus poderes de programação adormecidos dentro dele. Com um caminho
-                    conturbado pela frente ele encontra uma esperança chamada "Alura Cursos Online"<br/> <br/>
+                    A desordem reina no Brasil, um momento delicado onde aqueles que buscam salvar vidas são
+                    desrespeitados
+                    e combater a pandemia se tornou uma questão de opnião política, econômica e de achismo. O mundo
+                    encara uma corrida a todo
+                    vapor atrás da vacina para combater um inimigo em comum.<br /><br />
 
-                    Ela lhe apresenta a Imersão CSS, oque poderia ser a arma fundamental para começar a sua jornada em front-end.
+                    Com o plano de isolamento social iniciado, as pessoas dentro de casa, a chegada do tédio se torna
+                    inevitável,
+                    em meio a isso um jovem resolve desenvolver seus poderes de programação adormecidos dentro dele. Com
+                    um caminho
+                    conturbado pela frente ele encontra uma esperança chamada "Alura Cursos Online"<br /> <br />
+
+                    Ela lhe apresenta a Imersão CSS, oque poderia ser a arma fundamental para começar a sua jornada em
+                    front-end.
 
                 </p>
 
@@ -67,6 +104,8 @@
             <h1 class="site-title">Renato Matos</h1>
             <h2 class="site-subtitle">Jr. Frontend Developer</h2>
             <h2 class="site-subtitle">Jr. Backend Developer</h2>
+            <audio src="sound/starwartheme.mp3">
+            </audio>
         </div>
     </header>
 
