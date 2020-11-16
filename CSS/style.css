@@ -59,18 +59,25 @@ a:hover {
   list-style: none;
 }
 
+.menu-item {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 28px;
+}
+
 .site-title {
   font-size: 3em;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   color: whitesmoke;
   text-align: center;
   line-height: 2;
 }
 
 .site-subtitle {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   line-height: 1.5;
   color: whitesmoke;
+  text-align: center;
 }
 
 .img-portfolio {
@@ -92,14 +99,14 @@ a:hover {
   gap: 1em;
 }
 
-@media (min-width: 560px){
+@media (min-width: 560px) {
   .portifolio .grid {
-    grid-template-columns: repeat(2,240px);
+    grid-template-columns: repeat(2, 240px);
     justify-content: center;
   }
 }
 
-@media (min-width: 820px){
+@media (min-width: 820px) {
   .portifolio .grid {
     grid-template-columns: repeat(3, 240px);
     justify-content: center;
@@ -108,19 +115,47 @@ a:hover {
   }
 }
 
-.portifolio figure{
+.portifolio .figure {
   text-align: center;
-  
 }
 
-.portifolio h2 {
-  font-family: 'Press Start 2P', cursive;
+.portifolio .h2 {
+  font-family: "Press Start 2P", cursive;
   margin-bottom: 1.5em;
 }
 
-
-#apresentacao{
+.topic {
   height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.topic .title {
+  display: block;
+}
+
+.topic .about-me {
+  margin-top: 5%;
+  margin-left: 8%;
+  color: white;
+  display: block;
+}
+
+.topic .about-me .title {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+}
+
+.topic .about-me .list {
+  font-size: 22px;
+  color: white;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+.topic .about-me .list li {
+  padding: 2px;
 }
 
 input#un-mute {
