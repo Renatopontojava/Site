@@ -1,180 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<head>
-    <iframe src="sound/starwarsintro" allow="autoplay" id="audio" style="display: none"></iframe>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <iframe
+      src="sound/starwarsintro"
+      allow="autoplay"
+      id="audio"
+      style="display: none"
+    ></iframe>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Renato Matos</title>
     <!-- icones usando io.icons -->
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Amiri&family=Press+Start+2P&family=Raleway&family=Roboto+Slab:wght@800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="CSS/starwarsintro.css">
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri&family=Press+Start+2P&family=Raleway&family=Roboto+Slab:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/starwarsintro.css" />
 
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css" />
     <audio src="sound/starwarstheme.mp3" id="starwarstheme"></audio>
     <script type="text/javascript">
-        window.onload = function () {
-            var context = new AudioContext();
-            var swt = document.getElementById("starwarstheme");
-            swt.volume = 0.02;
-            document.getElementById("starwarstheme").click();
-        }
+      window.onload = function () {
+        var context = new AudioContext();
+        var swt = document.getElementById("starwarstheme");
+        swt.volume = 0.02;
+        document.getElementById("starwarstheme").click();
+      };
     </script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <nav class="menu">
-            <ul>
-                <li class="menu-item"><a href="#">SOBRE</a></li>
-                <li class="menu-item"><a href="#">PORTIFÓLIO</a></li>
-                <li class="menu-item"><a href="#">CONTATO</a></li>
-            </ul>
-        </nav>
+      <nav class="menu">
+        <ul>
+          <li class="menu-item"><a href="#">arquivo original</a></li>
+          <li class="menu-item"><a href="#">PORTIFÓLIO</a></li>
+          <li class="menu-item"><a href="#">CONTATO</a></li>
+        </ul>
+      </nav>
     </header>
 
-
     <div class="star-wars-intro">
-        <input type="checkbox" name="un-mute" id="un-mute" width="50px" height="50px">
-        <label for="un-mute" class="unmute">
-            <img src="./img/icon-mute.png" alt="Mute_Icon.svg" width="50px" height="50px" title="Mute icon">
-        </label>
-        <label for="un-mute" class="mute">
-            <img src="./img/icon-sound.png" alt="Speaker_Icon.svg" width="50px" height="50px"
-                title="Unmute/speaker icon">
-        </label>
-        <script>
-            setTimeout(function () {
-                document.getElementById("starwarstheme").play();
-            }, 2500)
+      <input
+        type="checkbox"
+        name="un-mute"
+        id="un-mute"
+        width="50px"
+        height="50px"
+      />
+      <label for="un-mute" class="unmute">
+        <img
+          src="./img/icon-mute.png"
+          alt="Mute_Icon.svg"
+          width="50px"
+          height="50px"
+          title="Mute icon"
+        />
+      </label>
+      <label for="un-mute" class="mute">
+        <img
+          src="./img/icon-sound.png"
+          alt="Speaker_Icon.svg"
+          width="50px"
+          height="50px"
+          title="Unmute/speaker icon"
+        />
+      </label>
+      <script>
+        setTimeout(function () {
+          document.getElementById("starwarstheme").play();
+        }, 2500);
 
+        var un_mute = document.getElementById("un-mute");
+        un_mute.onclick = function () {
+          if (document.getElementById("starwarstheme").muted == true) {
+            document.getElementById("starwarstheme").muted = false;
+          } else {
+            document.getElementById("starwarstheme").muted = true;
+          }
+        };
+      </script>
+      <!-- Blue Intro Text -->
+      <p class="intro-text">
+        Não muito tempo atrás numa galáxia não tão distante...
+      </p>
 
-            var un_mute = document.getElementById('un-mute');
-            un_mute.onclick = function () {
-                if (document.getElementById("starwarstheme").muted == true) {
-                    document.getElementById("starwarstheme").muted = false;
-                }
-                else { document.getElementById("starwarstheme").muted = true; }
-            };
-        </script>
-        <!-- Blue Intro Text -->
-        <p class="intro-text">
-            Não muito tempo atrás numa galáxia não tão distante...
-        </p>
+      <!-- Logo Image or Text goes in here -->
+      <h1 class="main-logo">NÃO AGUENTO MAIS O COVID!!!</h1>
 
-        <!-- Logo Image or Text goes in here -->
-        <h1 class="main-logo">
-            NÃO AGUENTO MAIS O COVID!!!
-        </h1>
+      <!-- All Scrolling Content Goes in here -->
+      <div class="main-content">
+        <div class="title-content">
+          <p class="content-header">EPISÓDIO I<br />A Nova Pandemia</p>
 
-        <!-- All Scrolling Content Goes in here -->
-        <div class="main-content">
+          <br />
 
+          <p class="content-body">
+            A desordem reina no Brasil, um momento delicado onde aqueles que
+            buscam salvar vidas são desrespeitados e combater a pandemia se
+            tornou uma questão de opnião política, econômica e de achismo. O
+            mundo encara uma corrida a todo vapor atrás da vacina para combater
+            um inimigo em comum.<br /><br />
 
-            <div class="title-content">
-                <p class="content-header">EPISÓDIO I<br />A Nova Pandemia</p>
+            Com o plano de isolamento social iniciado, as pessoas dentro de
+            casa, a chegada do tédio se torna inevitável, em meio a isso um
+            jovem resolve desenvolver seus poderes de programação adormecidos
+            dentro dele. Com um caminho conturbado pela frente ele encontra uma
+            esperança chamada "Alura Cursos Online"<br />
+            <br />
 
-                <br>
-
-                <p class="content-body">
-                    A desordem reina no Brasil, um momento delicado onde aqueles que buscam salvar vidas são
-                    desrespeitados
-                    e combater a pandemia se tornou uma questão de opnião política, econômica e de achismo. O mundo
-                    encara uma corrida a todo
-                    vapor atrás da vacina para combater um inimigo em comum.<br /><br />
-
-                    Com o plano de isolamento social iniciado, as pessoas dentro de casa, a chegada do tédio se torna
-                    inevitável,
-                    em meio a isso um jovem resolve desenvolver seus poderes de programação adormecidos dentro dele. Com
-                    um caminho
-                    conturbado pela frente ele encontra uma esperança chamada "Alura Cursos Online"<br /> <br />
-
-                    Ela lhe apresenta a Imersão CSS, oque poderia ser a arma fundamental para começar a sua jornada em
-                    front-end.
-
-                </p>
-
-            </div>
+            Ela lhe apresenta a Imersão CSS, oque poderia ser a arma fundamental
+            para começar a sua jornada em front-end.
+          </p>
         </div>
+      </div>
     </div>
-
-
 
     <div class="topic">
-        <div class="title">
-            <h1 class="site-title">Renato Matos</h1>
-            <div class="typewriter">
-                <div class="site-subtitle">Desenvolvedor Júnior.</div>
-            </div>
-            <!-- <audio src="sound/starwartheme.mp3">
+      <div class="title">
+        <h1 class="site-title">Renato Matos</h1>
+        <div class="typewriter">
+          <div class="site-subtitle">Desenvolvedor Júnior.</div>
+        </div>
+        <!-- <audio src="sound/starwartheme.mp3">
             </audio> -->
-        </div>
+      </div>
 
-        <div class="about-me">
-            <p class="title">
-                &lt;Sobre mim /&gt;
-            </p>
-            <ul class="list">
-                <li>🎓 Graduando em Tecnologia em Banco de Dados</li>
-                <li>💻 Programador e FreeLancer</li>
-                <li>☕ Amante de Café</li>
-                <li>🎮 Gamer nas horas vagas</li>
-                <li>🎧 Ouvindo musica 70% do tempo</li>
-                <li>📈 Em constante evolução</li>
-            </ul>
-        </div>
+      <div class="about-me">
+        <p class="title">&lt;Sobre mim /&gt;</p>
+        <ul class="list">
+          <li>🎓 Graduando em Tecnologia em Banco de Dados</li>
+          <li>💻 Programador e FreeLancer</li>
+          <li>☕ Amante de Café</li>
+          <li>🎮 Gamer nas horas vagas</li>
+          <li>🎧 Ouvindo musica 70% do tempo</li>
+          <li>📈 Em constante evolução</li>
+        </ul>
+      </div>
 
-        <div class="about-me">
-            <p class="title FAQ" style="background-color: black;">
-                Perguntas pessoais:
-            </p>
-            <section>
-                <div class="container">
-                    <div class="accordion">
-                        <div class="accordion-item" id="question1">
-                            <a class="accordion-link" href="#question1">
-                                1. Sobre mim
-                                <i class="icon ion-md-arrow-dropup"></i>
-                                <i class="icon ion-md-arrow-dropdown"></i>
-                            </a>
-                            <div class="answer">
-                                <p>teste</p>
-                            </div>
-                        </div>
-                        <div class="accordion-item" id="question2">
-                            <a class="accordion-link" href="#question2">
-                                Sobre mim
-                                <i class="icon ion-md-arrow-dropup"></i>
-                                <i class="icon ion-md-arrow-dropdown"></i>
-                            </a>
-                            <div class="answer">
-                                <p>teste</p>
-                            </div>
-                        </div>
-                        <div class="accordion-item" id="question3">
-                            <a class="accordion-link" href="#question3">
-                                Sobre mim
-                                <i class="icon ion-md-arrow-dropup"></i>
-                                <i class="icon ion-md-arrow-dropdown"></i>
-                            </a>
-                            <div class="answer">
-                                <p>teste</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="about-me">
+        <p class="title FAQ" style="background-color: black">
+          Perguntas pessoais:
+        </p>
+        <section>
+          <div class="container">
+            <div class="accordion">
+              <div class="accordion-item" id="personal1">
+                <a class="accordion-link" href="#personal1">
+                  1. Sobre mim
+                  <i class="icon ion-md-arrow-dropup"></i>
+                  <i class="icon ion-md-arrow-dropdown"></i>
+                </a>
+                <div class="answer">
+                  <p>
+                    Se você assistiu Friends e já viu o Chandler, pode aplicar
+                    as caracteristicas dele sobre mim. <br />
+                    Para quem não conhece, sou o alívio cômico da roda de amigos
+                    e autodepreciativo em nome do humor, muito expressivo, o
+                    carinha que sabe ver o lado positivo das coisas e que se
+                    assunto é encontrar o amor da minha vida, isso já é algo que
+                    eu me questiono. <br />
+                    faço curso em Banco de Dados e trabalho como Desenvolvedor
+                    Full Stack, tambem faço uns freela tambem na area de TI, sou
+                    fã da cultura nerd e geek em geral, alem de filmes de drama
+                    e animações de tudo quanto é estudio. Tenho uma certa paixão
+                    por games e como eles podem ser uma forma tao poderosa de se
+                    contar uma história ou fazer sentir algo, da mesma forma que
+                    um filme, pintura ou música faz(sim, games são arte e talvez
+                    você não esteja preparado pra essa conversa).Como boa parte
+                    dos programadores, sou viciado em cafeína,
+                  </p>
                 </div>
-            </section>
-
-        </div>
+              </div>
+              <div class="accordion-item" id="personal2">
+                <a class="accordion-link" href="#personal2">
+                  2. Oque tu gosta de fazer?
+                  <i class="icon ion-md-arrow-dropup"></i>
+                  <i class="icon ion-md-arrow-dropdown"></i>
+                </a>
+                <div class="answer">
+                  <p>
+                    Passar horas na frente do computador(pesquisando, jogando e
+                    programando), sair com a galera(Vamo? vamo), ouvir música,
+                    jogar RPG, ver filme/série, atormentar o meu cachorro com a
+                    minha atenção, passar um bom tempo tendo aquele papo com os
+                    amigos que renderia vários podcasts.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item" id="personal3">
+                <a class="accordion-link" href="#personal3">
+                  3. Você tem alguma meta de vida ?
+                  <i class="icon ion-md-arrow-dropup"></i>
+                  <i class="icon ion-md-arrow-dropdown"></i>
+                </a>
+                <div class="answer">
+                  <p>
+                    -Criar meu próprio jogo; <br />
+                    -Participar de uma Game Jam e Call for Code; <br />
+                    -Viajar por quase toda a Europa; <br />
+                    -Me aposentar (acho que é a mais difícil).
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item" id="personal5">
+                <a class="accordion-link" href="#personal5">
+                  5. Como aprendeu a programar ?
+                  <i class="icon ion-md-arrow-dropup"></i>
+                  <i class="icon ion-md-arrow-dropdown"></i>
+                </a>
+                <div class="answer">
+                  <p>
+                    Meu primeiro contato com programação foi na faculdade em
+                    2018, depois disso ainda demorei a aprender outras
+                    tecnologias e áreas que o curso não focava, pra suprir esse
+                    deficit comecei a aprender através de pesquisas e cursos na
+                    internet, mas o maior conhecimento veio com o estágio que
+                    comecei no primeiro semestre de 2019
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item" id="personal4">
+                <a class="accordion-link" href="#personal4">
+                  4. Porque criar esse site ?
+                  <i class="icon ion-md-arrow-dropup"></i>
+                  <i class="icon ion-md-arrow-dropdown"></i>
+                </a>
+                <div class="answer">
+                  <p>
+                    A melhor forma de aprender é praticar, e no momento eu
+                    preciso aprender um pouco de front-end (criação de
+                    interfaces) e tambem um belo projeto pequeno de apresentação
+                    pra por no meu currículo, então a criação de um site caiu
+                    como uma luva para oque eu precisava. Ainda estou no começo
+                    do conhecimento de front-end (espero poder tirar logo essa
+                    frase daqui) e o site vai estar em constante atualização,
+                    para todo o conhecimento que eu adquirir ele possa ser
+                    aplicado e praticado em algum lugar.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="about-me">
+        <p class="title FAQ" style="background-color: black">
+          Perguntas pessoais:
+        </p>
+        <section>
+          <div class="container">
+            <div class="accordion">
+              <div class="accordion-item" id="question1">
+                <a class="accordion-link" href="#question1">
+                  1. Sobre mim
+                  <i class="icon ion-md-arrow-dropup"></i>
+                  <i class="icon ion-md-arrow-dropdown"></i>
+                </a>
+                <div class="answer">
+                  <p>teste</p>
+                </div>
+              </div>
+              <div class="accordion-item" id="question2">
+                <a class="accordion-link" href="#question2">
+                  Sobre mim
+                  <i class="icon ion-md-arrow-dropup"></i>
+                  <i class="icon ion-md-arrow-dropdown"></i>
+                </a>
+                <div class="answer">
+                  <p>teste</p>
+                </div>
+              </div>
+              <div class="accordion-item" id="question3">
+                <a class="accordion-link" href="#question3">
+                  Sobre mim
+                  <i class="icon ion-md-arrow-dropup"></i>
+                  <i class="icon ion-md-arrow-dropdown"></i>
+                </a>
+                <div class="answer">
+                  <p>teste</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-
-
-
-</body>
-
+  </body>
 </html>

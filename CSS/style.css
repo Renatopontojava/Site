@@ -236,8 +236,10 @@ input#un-mute:checked ~ .mute img {
 
 .answer p {
   padding: 2rem;
-  background-color: gray;
-  color: black;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: gray;
+  color: white;
 }
 
 .accordion-item:target .answer {
