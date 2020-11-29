@@ -255,6 +255,10 @@ input#un-mute:checked ~ .mute img {
   display: block;
 }
 
+.social-menu {
+  padding-bottom: 20px;
+}
+
 .social-menu ul {
   position: absolute;
   left: 50%;
@@ -262,6 +266,8 @@ input#un-mute:checked ~ .mute img {
   margin: 0;
   transform: translate(-50%, -50%);
   display: flex;
+  padding-bottom: 20px;
+  padding-top: 30px;
 }
 
 .social-menu ul li {
