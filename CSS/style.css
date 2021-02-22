@@ -144,6 +144,11 @@ div .site-subtitle {
   padding: 2px;
 }
 
+.centered {
+  margin: 0 auto;
+  width: 100%;
+}
+
 .about-me .FAQ {
   border-style: solid;
   border-color: gray;
@@ -151,6 +156,9 @@ div .site-subtitle {
   padding: 2rem 2rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
 input#un-mute {
