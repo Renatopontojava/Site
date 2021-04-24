@@ -3,7 +3,6 @@
 
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <iframe src="sound/starwarsintro" allow="autoplay" id="audio" style="display: none"></iframe>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Renato Matos</title>
@@ -12,17 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Amiri&family=Press+Start+2P&family=Raleway&family=Roboto+Slab:wght@800&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="CSS/starwarsintro.css" />
 
   <link rel="stylesheet" href="CSS/style.css" />
-  <script type="text/javascript">
-    window.onload = function () {
-      var context = new AudioContext();
-      var swt = document.getElementById("starwarstheme");
-      swt.volume = 0.02;
-      document.getElementById("starwarstheme").click();
-    };
-  </script>
 </head>
 
 <body>
@@ -46,10 +36,10 @@
             </audio> -->
     </div>
 
-    <div class="about-me">
+    <div class="about-me-list">
       <p class="title centered">&lt;Sobre mim /&gt;</p>
       <ul class="list">
-        <li>🎓 Graduando em Tecnologia em Banco de Dados</li>
+        <li>🎓 Graduado em Tecnologia em Banco de Dados</li>
         <li>💻 Programador e FreeLancer</li>
         <li>☕ Amante de Café</li>
         <li>🎮 Gamer nas horas vagas</li>
@@ -65,8 +55,8 @@
       <section>
         <div class="container">
           <div class="accordion">
-            <div class="accordion-item" id="personal1">
-              <a class="accordion-link" href="#personal1">
+            <div class="accordion-item">
+              <a class="accordion-link">
                 1. Sobre mim
                 <i class="icon ion-md-arrow-dropup"></i>
                 <i class="icon ion-md-arrow-dropdown"></i>
@@ -93,8 +83,8 @@
                 </p>
               </div>
             </div>
-            <div class="accordion-item" id="personal2">
-              <a class="accordion-link" href="#personal2">
+            <div class="accordion-item">
+              <a class="accordion-link">
                 2. Oque tu gosta de fazer?
                 <i class="icon ion-md-arrow-dropup"></i>
                 <i class="icon ion-md-arrow-dropdown"></i>
@@ -109,8 +99,8 @@
                 </p>
               </div>
             </div>
-            <div class="accordion-item" id="personal3">
-              <a class="accordion-link" href="#personal3">
+            <div class="accordion-item">
+              <a class="accordion-link">
                 3. Você tem alguma meta de vida ?
                 <i class="icon ion-md-arrow-dropup"></i>
                 <i class="icon ion-md-arrow-dropdown"></i>
@@ -124,8 +114,8 @@
                 </p>
               </div>
             </div>
-            <div class="accordion-item" id="personal5">
-              <a class="accordion-link" href="#personal5">
+            <div class="accordion-item">
+              <a class="accordion-link">
                 4. Como aprendeu a programar ?
                 <i class="icon ion-md-arrow-dropup"></i>
                 <i class="icon ion-md-arrow-dropdown"></i>
@@ -141,8 +131,8 @@
                 </p>
               </div>
             </div>
-            <div class="accordion-item" id="personal4">
-              <a class="accordion-link" href="#personal4">
+            <div class="accordion-item">
+              <a class="accordion-link">
                 5. Porque criar esse site ?
                 <i class="icon ion-md-arrow-dropup"></i>
                 <i class="icon ion-md-arrow-dropdown"></i>
@@ -165,6 +155,15 @@
         </div>
       </section>
     </div>
+    <script>
+      const accordion = document.getElementsByClassName('accordion-item');
+
+      for (i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener('click', function () {
+          this.classList.toggle('active');
+        })
+      }
+    </script>
 
     <div class="social-menu">
       <ul>
@@ -190,47 +189,6 @@
         </li>
       </ul>
     </div>
-    <!-- <div class="about-me">
-        <p class="title FAQ" style="background-color: black">
-          Perguntas pessoais:
-        </p>
-        <section>
-          <div class="container">
-            <div class="accordion">
-              <div class="accordion-item" id="question1">
-                <a class="accordion-link" href="#question1">
-                  1. Sobre mim
-                  <i class="icon ion-md-arrow-dropup"></i>
-                  <i class="icon ion-md-arrow-dropdown"></i>
-                </a>
-                <div class="answer">
-                  <p>teste</p>
-                </div>
-              </div>
-              <div class="accordion-item" id="question2">
-                <a class="accordion-link" href="#question2">
-                  Sobre mim
-                  <i class="icon ion-md-arrow-dropup"></i>
-                  <i class="icon ion-md-arrow-dropdown"></i>
-                </a>
-                <div class="answer">
-                  <p>teste</p>
-                </div>
-              </div>
-              <div class="accordion-item" id="question3">
-                <a class="accordion-link" href="#question3">
-                  Sobre mim
-                  <i class="icon ion-md-arrow-dropup"></i>
-                  <i class="icon ion-md-arrow-dropdown"></i>
-                </a>
-                <div class="answer">
-                  <p>teste</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div> -->
   </div>
 </body>
 
