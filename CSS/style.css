@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: black;
+    background-size: auto 100vh;
+    font-family: Arial;
+    height: 100vh;
+  }
+  
+  header {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Se a tela tiver ao minimo 400 pixels, vai ser carregado estes estilos*/
+  
+  @media (min-width: 400px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /*Breakpoint - Pontos de quebra da tela que precisam de ajuste*/
+  
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  .menu {
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    border-bottom: 1px solid;
+    border-color: #fff;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu-item {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 28px;
+    text-align: center;
+    width: 30%;
+  }
+  
+  .site-title {
+    font-size: 3rem;
+    font-family: "Roboto Slab", serif;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 2;
+  }
+  
+  .typewriter {
+    font-family: Courier, monospace;
+    text-align: center;
+    display: block;
+  }
+  
+  div .site-subtitle {
+    font-family: "Press Start 2P", cursive;
+    color: whitesmoke;
+    display: inline-block;
+    overflow: hidden;
+    letter-spacing: 2px;
+    animation: blink 0.75s step-end infinite;
+    white-space: nowrap;
+    font-size: 90%;
+    font-weight: 700;
+    border-right: 4px solid whitesmoke;
+    box-sizing: border-box;
+  }
+  
+  @keyframes blink {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+  }
+  
+  .topic {
+    padding: 50px 0px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .topic .title {
+    display: block;
+  }
+  
+  .topic .about-me {
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-right: 8%;
+    color: white;
+    display: block;
+    padding-bottom: 5%;
+  }
+  
+  
+  .topic .about-me-list {
+    padding-top: 60px;
+    margin-left: 8%;
+    margin-right: 8%;
+    color: white;
+    display: block;
+    padding-bottom: 5%;
+  }
+  
+  .topic .about-me .title {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Roboto Slab", serif;
+  }
+  
+  .topic .about-me-list .title {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Roboto Slab", serif;
+  }
+  
+  .topic .about-me .list {
+    font-size: 22px;
+    color: white;
+    margin-left: 5%;
+    margin-top: 10px;
+  }
+  
+  .topic .about-me-list .list {
+    font-size: 22px;
+    color: white;
+    margin-left: 5%;
+    margin-top: 10px;
+  }
+  
+  .topic .about-me-list .list li {
+    padding: 2px;
+  }
+  
+  .centered {
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .about-me .FAQ {
+    border-style: solid;
+    border-color: gray;
+    border-width: 2px;
+    padding: 2rem 2rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  
+  input#un-mute {
+    display: none;
+  }
+  
+  .unmute img {
+    display: none;
+  }
+  
+  input#un-mute:checked ~ .unmute img {
+    display: initial;
+  }
+  
+  input#un-mute:checked ~ .mute img {
+    display: none;
+  }
+  
+  .container {
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+    background-color: black;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1.5em 1.5rem;
+    border-radius: 0px 0px 10px 10px;
+  }
+  
+  .accordion-item {
+    border-style: solid;
+    border-color: gray;
+    border-radius: 2px;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  .accordion-link {
+    font-family: "Roboto Slab", mono;
+    font-size: 1.6rem;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  
+  .accordion-link:hover {
+    text-decoration: none;
+  }
+  
+  .accordion-link i {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+  }
+  
+  .accordion-link .ion-md-arrow-dropup {
+    display: none;
+  }
+  
+  .answer {
+    border-radius: 10px;
+    max-height: 0;
+    overflow: hidden;
+    position: none;
+    background-color: black;
+    transition: max-height 650ms;
+  }
+  
+  .answer::before {
+    content: "";
+    position: absolute;
+    width: 0.6rem;
+    height: 90%;
+    top: 50%;
+    left: 0;
+    color: gray;
+    transform: translateY(-50%);
+  }
+  
+  .answer p {
+    text-align: justify;
+    padding: 10px;
+    color: white;
+  }
+  
+  .accordion-item.active .answer {
+    max-height: 50rem;
+  }
+  
+  .accordion-item.active .accordion-link .ion-md-arrow-dropdown {
+    display: none;
+  }
+  
+  .accordion-item.active .accordion-link .ion-md-arrow-dropup {
+    display: block;
+  }
+  
+  
+  .social-menu {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  
+  .social-menu ul {
+    position: absolute;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+  
+  .social-menu ul li {
+    list-style: none;
+    margin: 0 15px;
+  }
+  
+  .social-menu ul li .fa {
+    font-size: 30px;
+    line-height: 60px;
+    transition: 0.6s;
+    color: black;
+  }
+  .social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: gray;
+    text-align: center;
+    transition: 0.6s;
+  }
+  
+  .social-menu ul li a:hover {
+    transform: translate(0, -10px);
+  }
+  
+  .social-menu ul li .fa:hover {
+    color: #fff;
+  }
+  
